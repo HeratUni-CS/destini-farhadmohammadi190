@@ -26,5 +26,20 @@ return Scaffold(
    ), ),
   ),
    );
+    padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+     constraints: BoxConstraints.expand(),
+     child: SafeArea(
+     child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+    Expanded(
+    flex: 12,
+    child: Center(
+     child: Text(
+     storyBrain.getStory(),
+     style: TextStyle(
+     fontSize: 25.0,
+                    ),),),),),)
+
   }}
 
