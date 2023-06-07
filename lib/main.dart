@@ -40,6 +40,44 @@ return Scaffold(
      style: TextStyle(
      fontSize: 25.0,
                     ),),),),),)
+                          Expanded(
+                flex: 2,
+                child: FlatButton(
+                  onPressed: () {
+                    
+                    setState(() {
+                      storyBrain.nextStory(1);
+                    });
+            },
+            color: Colors.red,
+            child: Text(
+            storyBrain.getChoice1(),
+              style: TextStyle(
+             fontSize: 20.0,
+                    ),),),),
+              SizedBox(
+                height: 20.0,
+              ),
+         Expanded(
+             flex: 2,
+           child: Visibility(
+           visible: storyBrain.buttonShouldBeVisible(),
+            child: FlatButton(
+          onPressed: () {
+            setState(() {
+          storyBrain.nextStory(2);
+          });
+        },
+     color: Colors.blue,
+    child: Text(
+  storyBrain.getChoice2(),
+  style: TextStyle(
+  fontSize: 20.0,
+                      ),
+                    ),
+                  ),),),],),),), );
+  }
+}
 
   }}
 
